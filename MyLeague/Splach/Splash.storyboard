@@ -79,6 +79,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2dX-Ev-Gmv"/>
                     </view>
+                    <connections>
+                        <outlet property="backgroundImage" destination="Ae2-zE-eEX" id="mJX-lx-u1h"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="adU-EC-jb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

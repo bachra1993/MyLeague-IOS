@@ -10,10 +10,18 @@ import UIKit
 
 class SplashViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImage: UIImageView!
+    
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        UIView.animate(withDuration: 10, delay: 0, options: [.repeat, .autoreverse] , animations: {
+            self.backgroundImage.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
+            })
 
-        // Do any additional setup after loading the view.
     }
 
     @IBAction func startAction(_ sender: Any) {

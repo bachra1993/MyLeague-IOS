@@ -7,7 +7,11 @@ target 'MyLeague' do
   use_frameworks!
   
       pod 'Alamofire'
-      pod 'Hero' 
+      pod 'Hero'
+      pod 'SwiftyJSON'
+      pod 'AlamofireImage', '~> 3.3'
+
+
 
 
 end

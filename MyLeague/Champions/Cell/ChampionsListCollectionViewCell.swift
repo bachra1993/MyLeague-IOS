@@ -10,5 +10,6 @@ import UIKit
 
 class ChampionsListCollectionViewCell: UICollectionViewCell {
     //this is  a test update
+    @IBOutlet weak var champion_picture: UIImageView!
     
 }

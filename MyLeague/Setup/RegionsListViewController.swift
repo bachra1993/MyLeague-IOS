@@ -22,7 +22,8 @@ class RegionsListViewController: UIViewController,UICollectionViewDelegate,UICol
         
         
         doneBTN.isEnabled = false
-        doneBTN.setTitle("Select your region", for: .normal)
+        self.navigationController!.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.white]
+        self.title = "Select your region!"
     }
     
     

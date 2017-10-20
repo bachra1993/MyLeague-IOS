@@ -23,6 +23,9 @@
 		28AB50731F8132E400372035 /* MyLeagueUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB50721F8132E400372035 /* MyLeagueUITests.swift */; };
 		28AB50831F81368F00372035 /* Splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28AB50821F81368F00372035 /* Splash.storyboard */; };
 		28AB50851F8136A300372035 /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AB50841F8136A300372035 /* SplashViewController.swift */; };
+		28DED0CA1F9A6B6500D7E542 /* Urls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED0C91F9A6B6500D7E542 /* Urls.swift */; };
+		28DED0CD1F9A6E0400D7E542 /* AFWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED0CC1F9A6E0400D7E542 /* AFWrapper.swift */; };
+		28DED0D01F9A709000D7E542 /* Champion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28DED0CF1F9A709000D7E542 /* Champion.swift */; };
 		C8B2EE1CE1395D9B8139E1E3 /* Pods_MyLeague.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B033EE075301C79EE07950D /* Pods_MyLeague.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +69,9 @@
 		28AB50741F8132E400372035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28AB50821F81368F00372035 /* Splash.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Splash.storyboard; sourceTree = "<group>"; };
 		28AB50841F8136A300372035 /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		28DED0C91F9A6B6500D7E542 /* Urls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Urls.swift; sourceTree = "<group>"; };
+		28DED0CC1F9A6E0400D7E542 /* AFWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFWrapper.swift; sourceTree = "<group>"; };
+		28DED0CF1F9A709000D7E542 /* Champion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Champion.swift; sourceTree = "<group>"; };
 		2B033EE075301C79EE07950D /* Pods_MyLeague.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyLeague.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		94416DCA4E22BA65B2A0CBFE /* Pods-MyLeague.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLeague.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyLeague/Pods-MyLeague.release.xcconfig"; sourceTree = "<group>"; };
 		ECF84B984E106AADEE9C3B52 /* Pods-MyLeague.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyLeague.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyLeague/Pods-MyLeague.debug.xcconfig"; sourceTree = "<group>"; };
@@ -129,6 +135,7 @@
 			isa = PBXGroup;
 			children = (
 				28344C821F814E5200106E3E /* Color.swift */,
+				28DED0C91F9A6B6500D7E542 /* Urls.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -176,6 +183,7 @@
 		28AB504E1F8132E400372035 /* MyLeague */ = {
 			isa = PBXGroup;
 			children = (
+				28DED0CE1F9A707000D7E542 /* Models */,
 				28344C871F8170C600106E3E /* Champions */,
 				28344C7A1F8144E200106E3E /* Setup */,
 				28AB50811F81368200372035 /* Splach */,
@@ -205,6 +213,7 @@
 		28AB50801F8135A100372035 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				28DED0CB1F9A6DCD00D7E542 /* AFWrapper */,
 				28344C861F816A3C00106E3E /* Utils */,
 				28AB50591F8132E400372035 /* Assets.xcassets */,
 				28AB505E1F8132E400372035 /* Info.plist */,
@@ -222,6 +231,22 @@
 				28AB50841F8136A300372035 /* SplashViewController.swift */,
 			);
 			path = Splach;
+			sourceTree = "<group>";
+		};
+		28DED0CB1F9A6DCD00D7E542 /* AFWrapper */ = {
+			isa = PBXGroup;
+			children = (
+				28DED0CC1F9A6E0400D7E542 /* AFWrapper.swift */,
+			);
+			path = AFWrapper;
+			sourceTree = "<group>";
+		};
+		28DED0CE1F9A707000D7E542 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				28DED0CF1F9A709000D7E542 /* Champion.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		BEC108147A111968DEA461C0 /* Frameworks */ = {
@@ -379,7 +404,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		7CB7D3D32F12CADA481B600A /* [CP] Copy Pods Resources */ = {
@@ -425,9 +450,12 @@
 				28344C8D1F8171C500106E3E /* ChampionsListViewController.swift in Sources */,
 				28344C851F816A2A00106E3E /* SummonerViewController.swift in Sources */,
 				28AB50501F8132E400372035 /* AppDelegate.swift in Sources */,
+				28DED0CD1F9A6E0400D7E542 /* AFWrapper.swift in Sources */,
 				28AB50581F8132E400372035 /* MyLeague.xcdatamodeld in Sources */,
+				28DED0D01F9A709000D7E542 /* Champion.swift in Sources */,
 				28344C901F81732E00106E3E /* ChampionsListCollectionViewCell.swift in Sources */,
 				28344C7E1F81450C00106E3E /* RegionsListViewController.swift in Sources */,
+				28DED0CA1F9A6B6500D7E542 /* Urls.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
