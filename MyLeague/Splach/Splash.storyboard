@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="W8D-Os-5UX">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AvenirNext.ttc">
+            <string>AvenirNext-Bold</string>
+            <string>AvenirNext-DemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Splash View Controller-->
+        <scene sceneID="mi0-Ve-U9B">
+            <objects>
+                <viewController id="W8D-Os-5UX" customClass="SplashViewController" customModule="MyLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qbg-Q9-eBg">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="thresh" translatesAutoresizingMaskIntoConstraints="NO" id="Ae2-zE-eEX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dqd-Tl-kln">
+                                <rect key="frame" x="0.0" y="733" width="375" height="79"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SZD-qz-MMI">
+                                        <rect key="frame" x="117" y="0.0" width="141" height="49"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="49" id="1FH-uv-QNt"/>
+                                            <constraint firstAttribute="width" constant="141" id="aSp-ov-Dpu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="40"/>
+                                        <state key="normal" title="Start">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="startAction:" destination="W8D-Os-5UX" eventType="touchUpInside" id="KNS-Ci-9Gs"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="79" id="9zj-Jh-nor"/>
+                                    <constraint firstItem="SZD-qz-MMI" firstAttribute="top" secondItem="dqd-Tl-kln" secondAttribute="top" id="ZHW-al-t8i"/>
+                                    <constraint firstItem="SZD-qz-MMI" firstAttribute="centerX" secondItem="dqd-Tl-kln" secondAttribute="centerX" id="uXu-tq-Ysr"/>
+                                </constraints>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWn-Ns-8VS">
+                                <rect key="frame" x="16" y="485" width="343" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="60"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose your game" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Va0-Gx-vBP">
+                                <rect key="frame" x="55" y="559" width="265" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="25"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ae2-zE-eEX" firstAttribute="leading" secondItem="2dX-Ev-Gmv" secondAttribute="leading" id="GzD-B6-0yS"/>
+                            <constraint firstItem="Ae2-zE-eEX" firstAttribute="top" secondItem="qbg-Q9-eBg" secondAttribute="top" id="RDZ-52-38X"/>
+                            <constraint firstAttribute="bottom" secondItem="dqd-Tl-kln" secondAttribute="bottom" id="Spw-A8-n4z"/>
+                            <constraint firstItem="Ae2-zE-eEX" firstAttribute="bottom" secondItem="qbg-Q9-eBg" secondAttribute="bottom" id="XjY-iG-eM1"/>
+                            <constraint firstItem="Ae2-zE-eEX" firstAttribute="trailing" secondItem="2dX-Ev-Gmv" secondAttribute="trailing" id="h6o-RF-YXo"/>
+                            <constraint firstItem="dqd-Tl-kln" firstAttribute="leading" secondItem="2dX-Ev-Gmv" secondAttribute="leading" id="t20-9f-SME"/>
+                            <constraint firstItem="dqd-Tl-kln" firstAttribute="trailing" secondItem="2dX-Ev-Gmv" secondAttribute="trailing" id="wQ2-RC-2WH"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2dX-Ev-Gmv"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="adU-EC-jb2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="8.8000000000000007" y="-427.83251231527095"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="thresh" width="375" height="667"/>
+    </resources>
+</document>

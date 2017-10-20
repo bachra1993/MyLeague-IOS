@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="s8o-a9-uwz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Champions List View Controller-->
+        <scene sceneID="PID-pZ-RVe">
+            <objects>
+                <viewController storyboardIdentifier="ChampionsList" id="6Y3-Tl-oW0" customClass="ChampionsListViewController" customModule="MyLeague" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Cd8-Wm-peK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9lQ-Ap-HdN">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="xZ4-fJ-Tc0">
+                                    <size key="itemSize" width="137" height="109"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChampionsCell" id="nj4-FI-7nW" customClass="ChampionsListCollectionViewCell" customModule="MyLeague" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="137" height="109"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="137" height="109"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ahri" translatesAutoresizingMaskIntoConstraints="NO" id="9PR-hD-qLC">
+                                                    <rect key="frame" x="0.0" y="0.0" width="137" height="109"/>
+                                                </imageView>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="9PR-hD-qLC" firstAttribute="top" secondItem="nj4-FI-7nW" secondAttribute="top" id="COx-wa-i1o"/>
+                                            <constraint firstAttribute="bottom" secondItem="9PR-hD-qLC" secondAttribute="bottom" id="aly-VY-Evz"/>
+                                            <constraint firstItem="9PR-hD-qLC" firstAttribute="leading" secondItem="nj4-FI-7nW" secondAttribute="leading" id="kz2-YK-T71"/>
+                                            <constraint firstAttribute="trailing" secondItem="9PR-hD-qLC" secondAttribute="trailing" id="p5Y-7j-mri"/>
+                                        </constraints>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="6Y3-Tl-oW0" id="VJx-NV-u15"/>
+                                    <outlet property="delegate" destination="6Y3-Tl-oW0" id="DhD-6P-6O9"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.15686274509803921" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="G5l-UH-pzZ" firstAttribute="trailing" secondItem="9lQ-Ap-HdN" secondAttribute="trailing" id="0Hh-8O-9PE"/>
+                            <constraint firstAttribute="bottom" secondItem="9lQ-Ap-HdN" secondAttribute="bottom" id="KHB-fC-lKh"/>
+                            <constraint firstItem="9lQ-Ap-HdN" firstAttribute="top" secondItem="G5l-UH-pzZ" secondAttribute="top" id="vtX-xV-WOe"/>
+                            <constraint firstItem="9lQ-Ap-HdN" firstAttribute="leading" secondItem="G5l-UH-pzZ" secondAttribute="leading" id="zbo-uq-G4M"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="G5l-UH-pzZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="qIh-sa-XK9"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="i4m-UV-o4p" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="320.80000000000001" y="143.47826086956522"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="JZY-Cl-xVc">
+            <objects>
+                <navigationController storyboardIdentifier="NavigationChampions" automaticallyAdjustsScrollViewInsets="NO" id="s8o-a9-uwz" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="sLj-WR-nRX">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.14509803921568626" green="0.15686274509803921" blue="0.16470588235294117" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="barTintColor" red="0.11372549019607843" green="0.12549019607843137" blue="0.13333333333333333" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="6Y3-Tl-oW0" kind="relationship" relationship="rootViewController" id="GcP-Vb-UcG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8ik-ZL-fuv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-591" y="143"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ahri" width="120" height="120"/>
+    </resources>
+</document>
